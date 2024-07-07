@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Random Bible verses for inspiration.">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="Bible, verses, inspiration, Christianity">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2E2E2E">
+    <link rel="stylesheet" href="styles.css">
     <title>⸻Bible⸻</title>
     <style>
         body {
-            background-image: url('https://m.media-amazon.com/images/I/91DOC69GT1L.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            background-color: #2E2E2E;
             color: #FFFFFF;
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
@@ -18,30 +20,46 @@
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000000;
         }
         button {
-            background-color: rgba(68, 68, 68, 0.7);
+            background-color: #444;
             color: #FFF;
             border: 2px solid #FFF;
             padding: 10px 20px;
             font-size: 1.2em;
             cursor: pointer;
             margin-top: 20px;
+            box-shadow: 0px 0px 8px #888888;
         }
         button:hover {
-            background-color: rgba(102, 102, 102, 0.7);
+            background-color: #666;
         }
         .container {
             max-width: 600px;
             margin: 0 auto;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #888888;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #CCC;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Bible</h1>
-        <button onclick="downloadBibleVerse()">Bible</button>
+        <h1>Bible🄮</h1>
+        <p>Click below to download a random Bible verse:</p>
+        <button onclick="downloadBibleVerse()">Download Verse</button>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Bible Project. All rights reserved.</p>
+    </footer>
 
     <script>
         function getRandomBibleVerse() {
