@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible</title>
+    <style>
+        body {
+            background-color: #2E2E2E;
+            color: #FFFFFF;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #444;
+            color: #FFF;
+            border: 2px solid #FFF;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #666;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bible</h1>
-    <button onclick="downloadBibleVerse()">Download Random Bible Verse</button>
+    <div class="container">
+        <h1>Bible</h1>
+        <button onclick="downloadBibleVerse()">Bible</button>
+    </div>
 
     <script>
         function getRandomBibleVerse() {
@@ -57,7 +88,21 @@
                 "But the Lord stood at my side and gave me strength. - 2 Timothy 4:17",
                 "He gives strength to the weary and increases the power of the weak. - Isaiah 40:29",
                 "Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own. - Matthew 6:34",
-                "The Lord is a warrior; the Lord is his name. - Exodus 15:3"
+                "The Lord is a warrior; the Lord is his name. - Exodus 15:3",
+                "For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God. - Ephesians 2:8",
+                "He must increase, but I must decrease. - John 3:30",
+                "For we walk by faith, not by sight. - 2 Corinthians 5:7",
+                "I am the way, and the truth, and the life. No one comes to the Father except through me. - John 14:6",
+                "I can do all things through him who strengthens me. - Philippians 4:13",
+                "And we know that in all things God works for the good of those who love him, who have been called according to his purpose. - Romans 8:28",
+                "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law. - Galatians 5:22-23",
+                "For the word of God is alive and active. Sharper than any double-edged sword, it penetrates even to dividing soul and spirit, joints and marrow; it judges the thoughts and attitudes of the heart. - Hebrews 4:12",
+                "Your word is a lamp for my feet, a light on my path. - Psalm 119:105",
+                "Let the word of Christ dwell in you richly, teaching and admonishing one another in all wisdom, singing psalms and hymns and spiritual songs, with thankfulness in your hearts to God. - Colossians 3:16",
+                "For all have sinned and fall short of the glory of God, and all are justified freely by his grace through the redemption that came by Christ Jesus. - Romans 3:23-24",
+                "The Lord is good, a refuge in times of trouble. He cares for those who trust in him. - Nahum 1:7",
+                "Your word, Lord, is eternal; it stands firm in the heavens. - Psalm 119:89",
+                "The LORD is my strength and my song; he has given me victory. This is my God, and I will praise him— my father’s God, and I will exalt him. - Exodus 15:2"
             ];
             const randomIndex = Math.floor(Math.random() * verses.length);
             return verses[randomIndex];
