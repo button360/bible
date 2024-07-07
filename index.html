@@ -6,7 +6,9 @@
     <title>⸻Bible⸻</title>
     <style>
         body {
-            background-color: #2E2E2E;
+            background-image: url('https://m.media-amazon.com/images/I/91DOC69GT1L.png');
+            background-size: cover;
+            background-repeat: no-repeat;
             color: #FFFFFF;
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
@@ -17,7 +19,7 @@
             margin-bottom: 20px;
         }
         button {
-            background-color: #444;
+            background-color: rgba(68, 68, 68, 0.7);
             color: #FFF;
             border: 2px solid #FFF;
             padding: 10px 20px;
@@ -26,7 +28,7 @@
             margin-top: 20px;
         }
         button:hover {
-            background-color: #666;
+            background-color: rgba(102, 102, 102, 0.7);
         }
         .container {
             max-width: 600px;
@@ -110,11 +112,12 @@
 
         function downloadBibleVerse() {
             const verse = getRandomBibleVerse();
+            const randomNumber = Math.floor(Math.random() * 1000); // Generates a random number between 0 and 999
             const blob = new Blob([verse], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'random_bible_verse.txt';
+            a.download = `bible⸻${randomNumber}.txt`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
